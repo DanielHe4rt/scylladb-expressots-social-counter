@@ -1,4 +1,5 @@
 import pkg from "../package.json";
+import * as process from "process";
 
 const ENV = {
     Application: {
@@ -10,6 +11,12 @@ const ENV = {
     Log: {
         FILE: process.env.FILE as string,
         FOLDER: process.env.FOLDER as string,
+    },
+    Database: {
+        NODES: (process.env.DB_NODES as string).split(","),
+        DATACENTER: process.env.DB_DATACENTER as string,
+        USERNAME: process.env.DB_USERNAME as string,
+        PASSWORD: process.env.DB_PASSWORD as string,
     },
 };
 
