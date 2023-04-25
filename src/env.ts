@@ -19,5 +19,6 @@ const ENV = {
         PASSWORD: process.env.DB_PASSWORD as string,
     },
 };
+process.env.WSLENV = "wsl";
 
 export default ENV;
