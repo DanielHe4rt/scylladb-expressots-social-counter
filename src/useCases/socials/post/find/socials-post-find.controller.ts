@@ -3,7 +3,7 @@ import { controller, httpGet, response } from "inversify-express-utils";
 import { SocialsPostFindUseCase } from "./socials-post-find.usecase";
 import { ISocialsPostFindResponseDTO } from "./socials-post-find.dto";
 
-@controller("/socials/post/find")
+@controller("/post")
 class SocialsPostFindController extends BaseController {
     constructor(private socialsPostFindUseCase: SocialsPostFindUseCase) {
         super("socials-post-find-controller");
